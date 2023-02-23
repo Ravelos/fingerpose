@@ -48,7 +48,8 @@ const config = {
     // add "✌🏻" and "👍" as sample gestures
     const knownGestures = [
       fp.Gestures.VictoryGesture,
-      fp.Gestures.ThumbsUpGesture
+      fp.Gestures.ThumbsUpGesture,
+      ...gestures
     ]
     const GE = new fp.GestureEstimator(knownGestures)
     // load handpose model
