@@ -18,7 +18,8 @@ const config = {
     'victory': '✌🏻',
     'rock': '✊️',
     'paper': '🖐',
-    'scissors': '✌'
+    'scissors': '✌',
+    'dont': '🙅‍♂️'
 
   }
 
@@ -77,16 +78,19 @@ const config = {
         }
 
         const keypoints3D = hand.keypoints3D.map(keypoint => [keypoint.x, keypoint.y, keypoint.z])
-        const est = GE.estimate(keypoints3D, 9)
-        if (est.gestures.length > 0) {
+        const predictions = GE.estimate(keypoints3D, 9)
+        if (!predictions.gestures.length){
+          updateDebugInfo(predictions.poseData, 'left')
+        }
+        if (predictions.gestures.length > 0) {
 
           // find gesture with highest match score
-          let result = est.gestures.reduce((p, c) => {
+          let result = predictions.gestures.reduce((p, c) => {
             return (p.score > c.score) ? p : c
           })
           const chosenHand = hand.handedness.toLowerCase()
           resultLayer[chosenHand].innerText = gestureStrings[result.name]
-          updateDebugInfo(est.poseData, chosenHand)
+          updateDebugInfo(predictions.poseData, chosenHand)
         }
 
       }
