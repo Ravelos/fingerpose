@@ -2,7 +2,7 @@
 
 Finger gesture classifier for multiple hand landmarks detected by MediaPipe Handpose Detection. It detects gestures like "Victory" v or "Thumbs Up" +1 from both individual hands inside a source image or video stream. You can define additional hand gestures using simple gesture descriptions.
 
-## How it works
+# How it works
 
 Gesture detection works in three steps:
 
@@ -12,7 +12,7 @@ Gesture detection works in three steps:
 
 Step (1) is performed by MediaPipe Handpose, and Steps (2) and (3) are handled by this library.
 
-Demo
+#Demo
 
 Basic example
 
