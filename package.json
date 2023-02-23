@@ -1,0 +1,24 @@
+{
+  "name": "fingerpose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx browser-sync start --server --files src/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravelos/fingerpose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ravelos/fingerpose/issues"
+  },
+  "homepage": "https://github.com/Ravelos/fingerpose#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}
