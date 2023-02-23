@@ -6,9 +6,9 @@ Finger gesture classifier for multiple hand landmarks detected by MediaPipe Hand
 
 Gesture detection works in three steps:
 
-    Detect the hands' landmarks inside the video picture
-    Estimating the direction and curl of each individual finger
-    Comparing the result to a set of gesture descriptions
+   1. Detect the hands' landmarks inside the video picture
+   2. Estimating the direction and curl of each individual finger
+   3. Comparing the result to a set of gesture descriptions
 
 Step (1) is performed by MediaPipe Handpose, and Steps (2) and (3) are handled by this library.
 
